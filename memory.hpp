@@ -7,7 +7,7 @@
 using namespace std;
 
 namespace memory{
-	std::string processName;
+	string processName;
 	HANDLE hProc;
 
 	bool init(std::string process){
@@ -38,7 +38,7 @@ namespace memory{
 		return buf;
 	}
 
-	void* get_module(std::string moduleName){
+	void* get_module(string moduleName){
 		HANDLE hSnapshot = CreateToolhelp32Snapshot(TH32CS_SNAPMODULE, dwProcessID);
 	    DWORD modAddy = 0;
 	    if (hSnapshot != INVALID_HANDLE_VALUE)
